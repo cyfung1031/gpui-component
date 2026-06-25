@@ -195,9 +195,8 @@ name = "app_assets"
 version = "0.5.1"
 dependencies = [
  "anyhow",
- "gpui",
  "gpui-component",
- "gpui_platform",
+ "gpui_facade",
  "rust-embed",
 ]
 
@@ -1196,7 +1195,7 @@ dependencies = [
 [[package]]
 name = "collections"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "gpui_util",
  "indexmap",
@@ -1749,7 +1748,7 @@ dependencies = [
 [[package]]
 name = "derive_refineable"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1767,10 +1766,9 @@ name = "dialog_overlay"
 version = "0.5.1"
 dependencies = [
  "anyhow",
- "gpui",
  "gpui-component",
  "gpui-component-assets",
- "gpui_platform",
+ "gpui_facade",
 ]
 
 [[package]]
@@ -2234,9 +2232,8 @@ name = "focus_trap"
 version = "0.5.0"
 dependencies = [
  "anyhow",
- "gpui",
  "gpui-component",
- "gpui_platform",
+ "gpui_facade",
 ]
 
 [[package]]
@@ -2853,7 +2850,7 @@ dependencies = [
 [[package]]
 name = "gpui"
 version = "0.2.2"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "accesskit",
  "anyhow",
@@ -2930,7 +2927,6 @@ dependencies = [
  "waker-fn",
  "web-time",
  "windows 0.61.3",
- "zed-font-kit",
  "zed-scap",
 ]
 
@@ -2945,10 +2941,9 @@ dependencies = [
  "core-text",
  "enum-iterator",
  "futures",
- "gpui",
  "gpui-component-assets",
  "gpui-component-macros",
- "gpui_macros",
+ "gpui_facade",
  "html5ever 0.27.0",
  "indoc",
  "instant",
@@ -3023,7 +3018,7 @@ name = "gpui-component-assets"
 version = "0.5.1"
 dependencies = [
  "anyhow",
- "gpui",
+ "gpui_facade",
  "log",
  "rust-embed",
  "wasm-bindgen",
@@ -3051,11 +3046,9 @@ dependencies = [
  "csv",
  "dirs",
  "fake",
- "gpui",
  "gpui-component",
  "gpui-component-assets",
- "gpui_platform",
- "gpui_web",
+ "gpui_facade",
  "gtk",
  "itertools 0.14.0",
  "lsp-types 0.97.0",
@@ -3078,11 +3071,10 @@ version = "0.5.1"
 dependencies = [
  "console_error_panic_hook",
  "console_log",
- "gpui",
  "gpui-component",
  "gpui-component-assets",
  "gpui-component-story",
- "gpui_platform",
+ "gpui_facade",
  "log",
  "tracing-wasm",
  "wasm-bindgen",
@@ -3093,14 +3085,25 @@ name = "gpui-wry"
 version = "0.5.0"
 dependencies = [
  "anyhow",
- "gpui",
+ "gpui_facade",
  "lb-wry",
+]
+
+[[package]]
+name = "gpui_facade"
+version = "0.2.2"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
+dependencies = [
+ "gpui",
+ "gpui_macros",
+ "gpui_platform",
+ "gpui_web",
 ]
 
 [[package]]
 name = "gpui_linux"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "accesskit",
  "accesskit_unix",
@@ -3151,7 +3154,7 @@ dependencies = [
 [[package]]
 name = "gpui_macos"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "accesskit",
  "accesskit_macos",
@@ -3198,7 +3201,7 @@ dependencies = [
 [[package]]
 name = "gpui_macros"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "heck 0.5.0",
  "proc-macro2",
@@ -3209,7 +3212,7 @@ dependencies = [
 [[package]]
 name = "gpui_platform"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "console_error_panic_hook",
  "gpui",
@@ -3222,7 +3225,7 @@ dependencies = [
 [[package]]
 name = "gpui_shared_string"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "schemars",
  "serde",
@@ -3232,7 +3235,7 @@ dependencies = [
 [[package]]
 name = "gpui_util"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "anyhow",
  "log",
@@ -3242,7 +3245,7 @@ dependencies = [
 [[package]]
 name = "gpui_web"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "anyhow",
  "console_error_panic_hook",
@@ -3266,7 +3269,7 @@ dependencies = [
 [[package]]
 name = "gpui_wgpu"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "anyhow",
  "bytemuck",
@@ -3295,7 +3298,7 @@ dependencies = [
 [[package]]
 name = "gpui_windows"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "accesskit",
  "accesskit_windows",
@@ -3499,9 +3502,8 @@ name = "hello_world"
 version = "0.5.1"
 dependencies = [
  "anyhow",
- "gpui",
  "gpui-component",
- "gpui_platform",
+ "gpui_facade",
 ]
 
 [[package]]
@@ -3611,7 +3613,7 @@ dependencies = [
 [[package]]
 name = "http_client"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "anyhow",
  "async-compression",
@@ -3631,7 +3633,7 @@ dependencies = [
 [[package]]
 name = "http_client_tls"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "rustls",
  "rustls-platform-verifier",
@@ -3957,10 +3959,9 @@ name = "input"
 version = "0.5.1"
 dependencies = [
  "anyhow",
- "gpui",
  "gpui-component",
  "gpui-component-assets",
- "gpui_platform",
+ "gpui_facade",
 ]
 
 [[package]]
@@ -4637,7 +4638,7 @@ dependencies = [
 [[package]]
 name = "media"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "anyhow",
  "bindgen",
@@ -5605,7 +5606,7 @@ checksum = "9b4f627cb1b25917193a259e49bdad08f671f8d9708acfd5fe0a8c1455d87220"
 [[package]]
 name = "perf"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "collections",
  "serde",
@@ -6598,7 +6599,7 @@ dependencies = [
 [[package]]
 name = "refineable"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "derive_refineable",
 ]
@@ -6650,7 +6651,7 @@ checksum = "19b30a45b0cd0bcca8037f3d0dc3421eaf95327a17cad11964fb8179b4fc4832"
 [[package]]
 name = "reqwest_client"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "anyhow",
  "bytes",
@@ -6755,9 +6756,8 @@ dependencies = [
 name = "root_borderless"
 version = "0.5.1"
 dependencies = [
- "gpui",
  "gpui-component",
- "gpui_platform",
+ "gpui_facade",
 ]
 
 [[package]]
@@ -7087,7 +7087,7 @@ dependencies = [
 [[package]]
 name = "scheduler"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "async-task",
  "backtrace",
@@ -7413,10 +7413,9 @@ name = "sidebar"
 version = "0.5.1"
 dependencies = [
  "anyhow",
- "gpui",
  "gpui-component",
  "gpui-component-assets",
- "gpui_platform",
+ "gpui_facade",
 ]
 
 [[package]]
@@ -7724,7 +7723,7 @@ checksum = "13c2bddecc57b384dee18652358fb23172facb8a2c51ccc10d74c157bdea3292"
 [[package]]
 name = "sum_tree"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "heapless",
  "log",
@@ -7968,10 +7967,9 @@ dependencies = [
  "anyhow",
  "battery",
  "core-foundation 0.10.0",
- "gpui",
  "gpui-component",
  "gpui-component-assets",
- "gpui_platform",
+ "gpui_facade",
  "metal",
  "smol",
  "sysinfo 0.37.2",
@@ -8063,10 +8061,9 @@ name = "text_selection"
 version = "0.5.1"
 dependencies = [
  "anyhow",
- "gpui",
  "gpui-component",
  "gpui-component-assets",
- "gpui_platform",
+ "gpui_facade",
 ]
 
 [[package]]
@@ -8402,9 +8399,8 @@ name = "tooltip_top_edge"
 version = "0.5.1"
 dependencies = [
  "anyhow",
- "gpui",
  "gpui-component",
- "gpui_platform",
+ "gpui_facade",
 ]
 
 [[package]]
@@ -9175,7 +9171,7 @@ checksum = "b6c140620e7ffbb22c2dee59cafe6084a59b5ffc27a8859a5f0d494b5d52b6be"
 [[package]]
 name = "util_macros"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "perf",
  "quote",
@@ -9601,10 +9597,9 @@ name = "webview"
 version = "0.5.0"
 dependencies = [
  "anyhow",
- "gpui",
  "gpui-component",
  "gpui-wry",
- "gpui_platform",
+ "gpui_facade",
  "gtk",
  "lb-wry",
  "raw-window-handle",
@@ -9860,10 +9855,9 @@ name = "window_title"
 version = "0.5.1"
 dependencies = [
  "anyhow",
- "gpui",
  "gpui-component",
  "gpui-component-assets",
- "gpui_platform",
+ "gpui_facade",
 ]
 
 [[package]]
@@ -11036,7 +11030,7 @@ dependencies = [
 [[package]]
 name = "zlog"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "anyhow",
  "chrono",
@@ -11053,7 +11047,7 @@ checksum = "b8848ee67ecc8aedbaf3e4122217aff892639231befc6a1b58d29fff4c2cabaa"
 [[package]]
 name = "ztracing"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 dependencies = [
  "tracing",
  "tracing-subscriber",
@@ -11064,7 +11058,7 @@ dependencies = [
 [[package]]
 name = "ztracing_macro"
 version = "0.1.0"
-source = "git+https://github.com/cyfung1031/zed?rev=b14792acef13e5460e1e507de3f92f308c7d59b1#b14792acef13e5460e1e507de3f92f308c7d59b1"
+source = "git+https://github.com/cyfung1031/zed?rev=983666b84c428e315b6ae77e40278646dd9c0775#983666b84c428e315b6ae77e40278646dd9c0775"
 
 [[package]]
 name = "zune-core"

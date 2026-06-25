@@ -33,7 +33,7 @@ impl Render for TooltipTopEdgeExample {
 }
 
 fn main() {
-    let app = gpui_platform::application();
+    let app = gpui::gpui_platform::application();
 
     app.run(move |cx| {
         gpui_component::init(cx);

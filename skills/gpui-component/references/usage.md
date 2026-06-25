@@ -18,7 +18,7 @@ gpui-component-assets = { git = "https://github.com/longbridge/gpui-component" }
 
 ```rust
 fn main() {
-    gpui_platform::application()
+    gpui::gpui_platform::application()
         .with_assets(gpui_component_assets::Assets)
         .run(move |cx| {
             gpui_component::init(cx); // MUST be first

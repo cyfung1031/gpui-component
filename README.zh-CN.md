@@ -62,7 +62,7 @@ impl Render for HelloWorld {
 }
 
 fn main() {
-    gpui_platform::application().run(move |cx| {
+    gpui::gpui_platform::application().run(move |cx| {
         // 使用任何 GPUI Component 功能之前必须先调用此函数。
         gpui_component::init(cx);
 

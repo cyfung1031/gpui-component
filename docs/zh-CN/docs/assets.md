@@ -33,7 +33,7 @@ gpui-component-assets = { git = "https://github.com/longbridge/gpui-component" }
 use gpui::*;
 use gpui_component_assets::Assets;
 
-let app = gpui_platform::application().with_assets(Assets);
+let app = gpui::gpui_platform::application().with_assets(Assets);
 ```
 
 完成后，你就可以像平常一样使用 `IconName` 和 `Icon`。这些图标会从默认打包资源中读取。
@@ -90,7 +90,7 @@ impl AssetSource for Assets {
 ```rs
 fn main() {
     // Register Assets to GPUI application.
-    let app = gpui_platform::application().with_assets(Assets);
+    let app = gpui::gpui_platform::application().with_assets(Assets);
 
     app.run(move |cx| {
         // We must initialize gpui_component before using it.
